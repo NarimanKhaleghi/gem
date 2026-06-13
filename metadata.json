@@ -1,0 +1,6 @@
+{
+  "name": "Gemini Proxy PWA",
+  "description": "A smart PWA proxy interface for Google Gemini models focusing on privacy through user-configurable proxies.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

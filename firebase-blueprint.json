@@ -1,0 +1,34 @@
+{
+  "entities": {
+    "UserSecret": {
+      "title": "UserSecret",
+      "description": "Encrypted user secrets",
+      "type": "object",
+      "properties": {
+        "encryptedData": { "type": "string" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["encryptedData", "updatedAt"]
+    },
+    "ChatSync": {
+      "title": "ChatSync",
+      "description": "Encrypted chat blobs",
+      "type": "object",
+      "properties": {
+        "encryptedData": { "type": "string" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["encryptedData", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "users/{userId}/secrets/main": {
+      "schema": { "$ref": "#/entities/UserSecret" },
+      "description": "User API keys and settings encrypted"
+    },
+    "users/{userId}/chats/{chatId}": {
+      "schema": { "$ref": "#/entities/ChatSync" },
+      "description": "Encrypted chat data"
+    }
+  }
+}
